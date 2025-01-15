@@ -25,6 +25,12 @@ spec:
               protocol: TCP
           env:
             - name: VOTING_API_SERVICE_HOST
-              value: pipelines-vote-api
+              valueFrom:
+                configMapKeyRef:
+                  name: ui-config
+                  key: VOTING_API_SERVICE_HOST
             - name: VOTING_API_SERVICE_PORT
-              value: "9000"
+              valueFrom:
+                configMapKeyRef:
+                  name: ui-config
+                  key: VOTING_API_SERVICE_PORT

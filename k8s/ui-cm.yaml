@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ui-config
+data:
+  VOTING_API_SERVICE_HOST: pipelines-vote-api
+  VOTING_API_SERVICE_PORT: "9000"
